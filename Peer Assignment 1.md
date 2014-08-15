@@ -68,7 +68,7 @@ print(xtable(table(valid)), type="html")
 ```
 
 <!-- html table generated in R 3.1.1 by xtable 1.7-3 package -->
-<!-- Fri Aug 15 17:14:51 2014 -->
+<!-- Fri Aug 15 17:55:47 2014 -->
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> valid </TH>  </TR>
   <TR> <TD align="right"> 0 </TD> <TD align="right">   8 </TD> </TR>
@@ -147,7 +147,7 @@ print(xtable(table(is.na(activity[ , "steps"]))), type="html")
 ```
 
 <!-- html table generated in R 3.1.1 by xtable 1.7-3 package -->
-<!-- Fri Aug 15 17:14:51 2014 -->
+<!-- Fri Aug 15 17:55:47 2014 -->
 <TABLE border=1>
 <TR> <TH>  </TH> <TH> V1 </TH>  </TR>
   <TR> <TD align="right"> FALSE </TD> <TD align="right"> 15264 </TD> </TR>
@@ -184,7 +184,7 @@ The mean number of steps taken each day is 10766 and the median number of steps 
 
 
 ```r
- hist(x=sums, breaks=30, main="Histogram of steps taken each day")
+ hist(x=sums, breaks=30, main="Histogram of steps taken each day (after imputing data)")
 ```
 
 ![plot of chunk unnamed-chunk-19](figure/unnamed-chunk-19.png) 
@@ -234,4 +234,4 @@ abline(0, 0)
 * The histograms show relatively normal distribution of daily walking. However, there are a couple of very low values (even after imputing the missing data). It's possible that those days the person forgot to wear the monitor or there was a technical problem, but without additional information we can't know what really happened. 
 * On average, this person takes over 10,000 steps per day. According to http://www.thewalkingsite.com/10000steps.html, that's a lot: approximately 5 miles!
 * This person's walking peaks at 8:35 AM. There are a few other small spikes in walking around 12-1 PM and in the early evening, but the morning peak is more than twice as large as any other 5-minute interval. 
-* Relative to weekends, there is a spike in walking during early morning and morning commute hours (6-9) on weekdays. This is offset by more walking during the rest of the workday (10-5) on weekends relative to weekdays.
+* Relative to weekends, there is a spike in walking during early morning and morning commute hours (6-9) on weekdays. This is offset by more walking from 9 AM to 5 PM on weekends relative to weekdays.
